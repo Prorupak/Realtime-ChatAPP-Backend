@@ -31,8 +31,8 @@ app.post('/', (req, res) => {
                 if(!user.online) {
                     twilioClient.messages.create({
                         body: `${sender.name}: ${message}`,
-                        from: `whatsapp:${messagingServiceSid}`,
-                        to: `whatsapp:${user.phone_number}`
+                        from: messagingServiceSid,
+                        to: '+9779845667762'
                     })
                     
                         .then(() => console.log('Message sent!'))
